@@ -1,0 +1,4 @@
+D:\C#\project\WinQuery\WinQuery\bin\Release\WinQuery.dll
+D:\C#\project\WinQuery\WinQuery\bin\Release\WinQuery.pdb
+D:\C#\project\WinQuery\WinQuery\obj\Release\WinQuery.dll
+D:\C#\project\WinQuery\WinQuery\obj\Release\WinQuery.pdb

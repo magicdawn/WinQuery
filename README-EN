@@ -1,0 +1,7 @@
+#var WinQuery = WinForm + jQuery;
+
+this is a instance of jQuery on Winform .NET Platform
+
+***
+1. Selector
+	a string,that can be

@@ -1,0 +1,12 @@
+D:\C#\project\WinQuery\WinQuery.Test\obj\Debug\WinQuery.Test.csprojResolveAssemblyReference.cache
+D:\C#\project\WinQuery\WinQuery.Test\obj\Debug\WinQuery.Test.Properties.Resources.resources
+D:\C#\project\WinQuery\WinQuery.Test\obj\Debug\WinQuery.Test.csproj.GenerateResource.Cache
+D:\C#\project\WinQuery\WinQuery.Test\bin\Debug\WinQuery.Test.exe
+D:\C#\project\WinQuery\WinQuery.Test\bin\Debug\WinQuery.Test.pdb
+D:\C#\project\WinQuery\WinQuery.Test\obj\Debug\WinQuery.Test.exe
+D:\C#\project\WinQuery\WinQuery.Test\obj\Debug\WinQuery.Test.pdb
+D:\C#\project\WinQuery\WinQuery.Test\bin\Debug\WinQuery.dll
+D:\C#\project\WinQuery\WinQuery.Test\bin\Debug\WinQuery.pdb
+D:\C#\project\WinQuery\WinQuery.Test\obj\Debug\WinQuery.Test.FrmMain.resources
+D:\C#\project\WinQuery\WinQuery.Test\bin\Debug\CsQuery.dll
+D:\C#\project\WinQuery\WinQuery.Test\bin\Debug\CsQuery.xml
