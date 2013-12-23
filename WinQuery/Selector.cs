@@ -9,14 +9,18 @@ using System.Text.RegularExpressions;
 using System.Reflection;
 namespace WinQuery
 {
-    public static class FormExtension
+    /// <summary>
+    /// 选择器,是对Form的扩展
+    /// </summary>
+    public static class Selector
     {
+        //根据String 选择器来选择
         /// <summary>
         /// 选择器
         /// </summary>
-        /// <param name="form">扩展方法,Form里面可以直接调用</param>
+        /// <param name="frm">当前窗体</param>
         /// <param name="selector">选择器</param>
-        /// <param name="context">上下文,容器,默认为当前form</param>
+        /// <param name="context">上下文:即包含要选出的控件的容器,默认为当前窗体</param>
         /// <returns></returns>
         public static Wq Wq(this Form frm, string selector, Control context = null)
         {
@@ -55,7 +59,7 @@ namespace WinQuery
                         switch (equalType)
                         {
                             case "=":
-                                res = ctlRealVal==value;
+                                res = ctlRealVal == value;
                                 break;
                             case "!=":
                                 res = ctlRealVal != value;
@@ -73,9 +77,9 @@ namespace WinQuery
                                 return false;
                         }
                         return res;
-                    }); 
+                    });
                     #endregion
-                } 
+                }
                 #endregion
 
                 wrapper.Controls.AddRange(query);
@@ -85,11 +89,36 @@ namespace WinQuery
             return wrapper;
         }
 
-        //直接选择 控件
+        //直接选择控件
+        /// <summary>
+        /// 直接选择控件
+        /// </summary>
+        /// <param name="frm">当前窗体</param>
+        /// <param name="controls">要选择的控件</param>
+        /// <returns></returns>
         public static Wq Wq(this Form frm, params Control[] controls)
         {
             Wq wrapper = new Wq();
             wrapper.Controls.AddRange(controls);
+            return wrapper;
+        }
+
+        //根据一个Predicate委托来选择
+        /// <summary>
+        /// 根据一个Predicate委托来选择
+        /// </summary>
+        /// <param name="frm">当前窗体</param>
+        /// <param name="predicate">Predicate委托</param>
+        /// <param name="context">上下文:即包含要选出的控件的容器,默认为当前窗体</param>
+        /// <returns></returns>
+        public static Wq Wq(this Form frm, Func<Control, bool> predicate, Control context = null)
+        {
+            Wq wrapper = new Wq();
+            if (context == null)
+            {
+                context = frm;
+            }
+            wrapper.Controls.AddRange(context.Controls.OfType<Control>().Where(predicate));
             return wrapper;
         }
     }

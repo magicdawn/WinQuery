@@ -10,17 +10,32 @@ using WinQuery.Options;
 namespace WinQuery
 {
     //一些控件的扩展方法
+    /// <summary>
+    /// 一些控件的扩展方法
+    /// </summary>
     public static class ControlExtension
     {
         #region 显示,隐藏
+        /// <summary>
+        /// 显示
+        /// </summary>
+        /// <param name="ctl">要操作的控件</param>
         public static void Show(this Control ctl)
         {
             ctl.Visible = true;
         }
+        /// <summary>
+        /// 隐藏
+        /// </summary>
+        /// <param name="ctl">要操作的控件</param>
         public static void Hide(this Control ctl)
         {
             ctl.Visible = false;
         }
+        /// <summary>
+        /// 切换 显示,隐藏
+        /// </summary>
+        /// <param name="ctl">要操作的控件</param>
         public static void Toggle(this Control ctl)
         {
             ctl.Visible = !ctl.Visible;
@@ -28,14 +43,26 @@ namespace WinQuery
         #endregion
 
         #region 激活,失效
+        /// <summary>
+        /// 激活
+        /// </summary>
+        /// <param name="ctl">要操作的控件</param>
         public static void Enable(this Control ctl)
         {
             ctl.Enabled = true;
         }
+        /// <summary>
+        /// 失效
+        /// </summary>
+        /// <param name="ctl">要操作的控件</param>
         public static void Disable(this Control ctl)
         {
             ctl.Enabled = false;
         }
+        /// <summary>
+        /// 切换 激活,失效
+        /// </summary>
+        /// <param name="ctl">要操作的控件</param>
         public static void ToggleEnable(this Control ctl)
         {
             ctl.Enabled = !ctl.Enabled;
@@ -43,6 +70,12 @@ namespace WinQuery
         #endregion
 
         #region 动画
+        //抖动窗口控件
+        /// <summary>
+        /// 抖动窗口控件
+        /// </summary>
+        /// <param name="ctl">要操作的控件</param>
+        /// <param name="Options">抖动时的一些参数封装</param>
         public static void Shake(this Control ctl, ShakeOptions Options=null)
         {
             //Shake代码实现
@@ -84,6 +117,12 @@ namespace WinQuery
             #endregion
         }
 
+        //仿Jq动画
+        /// <summary>
+        /// 仿Jq动画
+        /// </summary>
+        /// <param name="ctl">要操作的控件</param>
+        /// <param name="Options">动画的一些参数封装,必须提供</param>
         public static void Animate(this Control ctl, AnimateOptions Options)
         {
             var oldX = ctl.Location.X;
@@ -113,6 +152,12 @@ namespace WinQuery
         #endregion
 
         #region 工具
+        //递归拿到一个Control的所有子控件
+        /// <summary>
+        /// 递归拿到一个Control的所有子控件
+        /// </summary>
+        /// <param name="ctl">要操作的控件</param>
+        /// <returns>子控件,泛型List</returns>
         public static List<Control> GetAllControls(this Control ctl)
         {
             List<Control> ctls = new List<Control>();
