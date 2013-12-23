@@ -4,7 +4,7 @@
 WinForm平台上的jQuery实现
 
 ***
-#贴吧讨论地址[http://tieba.baidu.com/p/2774369621][http://tieba.baidu.com/p/2774369621 "贴吧"]
+#贴吧讨论地址<a href="http://tieba.baidu.com/p/2774369621">http://tieba.baidu.com/p/2774369621</a>
 ***
 #Selector 选择器,可以传一个context值,表示容器
 -
