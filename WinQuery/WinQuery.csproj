@@ -42,7 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ControlExtension.cs" />
-    <Compile Include="FormExtension.cs" />
+    <Compile Include="Selector.cs" />
     <Compile Include="ListExtension.cs" />
     <Compile Include="Options\AnimateOptions.cs" />
     <Compile Include="Options\ShakeOptions.cs" />
